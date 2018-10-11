@@ -27,7 +27,7 @@ public class Eskaera {
 		else {
 			//Multzotako elkargarria
 			int mkop=8/cache.Mtam;
-			this.tag=this.Blokea/cache.Htam;
+			this.tag=this.Blokea/mkop;
 			this.Multzoa=this.Blokea%mkop;
 			
 		}
@@ -97,7 +97,7 @@ public class Eskaera {
 			cache.Memoria[pos][2]=tag;//tag
 			cache.Memoria[pos][3]=0;//ord
 			cache.Memoria[pos][4]=Blokea;//blokea;
-			cache.ExekuzioDenbora+=2+20+(cache.Btam/cache.Htam);
+			cache.ExekuzioDenbora+=2+20+(cache.Btam/cache.Htam)-1;
 		}
 		
 		//LRU denean, orain erabili den datua 0 balioa izan behar du
